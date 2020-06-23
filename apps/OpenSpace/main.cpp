@@ -1298,7 +1298,7 @@ int main(int argc, char** argv) {
         Engine::create(cluster, callbacks, config);
     }
     catch (const std::runtime_error& e) {
-        LFATAL("main", e.what());
+        LFATALC("main", e.what());
         Engine::destroy();
         global::openSpaceEngine.deinitialize();
         ghoul::deinitialize();
