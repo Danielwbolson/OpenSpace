@@ -1,0 +1,43 @@
+-- This asset requires OpenSpace to be built with the OPENSPACE_MODULE_TOYVOLUME enabled
+
+local assetHelper = asset.require("util/asset_helper")
+local earth = asset.require("scene/solarsystem/planets/earth/earth")
+-- local transforms = asset.require("scene/solarsystem/planets/earth/transforms")
+local transforms = asset.require("scene/solarsystem/sun/transforms")
+
+local VisLink = {
+    Identifier = "VisLink",
+    -- Parent = transforms.EarthIAU.Identifier,
+    Parent = transforms.SolarSystemBarycenter.Identifier,
+    -- Parent = earth.Earth.Identifier,
+--    Transform = {
+--        Translation = {
+--            Type = "GlobeTranslation",
+--            Globe = earth.Earth.Identifier,
+-- Guam
+--            Longitude = 144.7937,
+--            Latitude = 13.4443
+-- Gulf of Mexico
+--            Longitude = -89.890137,
+--            Latitude = 25.681137
+--  ?          Longitude = -74.006,
+--  ?          Latitude = 40.7128
+-- 25.681137, -89.890137
+--        }
+--    },
+    Renderable = {
+        Type = "RenderableVisLink",
+        Size = {5, 5, 5},
+        -- ScalingExponent = 6,
+        ScalingExponent = 10,
+        StepSize = 0.01,
+        Color = {1, 0, 0, 1},
+	VisLinkTexture = "VisLink21"
+    },
+    GUI = {
+        Path = "/vislink"
+    }
+}
+
+local objects = { VisLink }
+assetHelper.registerSceneGraphNodesAndExport(asset, objects)

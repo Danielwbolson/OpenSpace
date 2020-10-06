@@ -231,6 +231,10 @@ if (OPENSPACE_HAVE_TESTS)
 endif (OPENSPACE_HAVE_TESTS)
 
 
+# VisLink
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/modules/vislink/ext/external/VisLinkLib/src/src)
+
+
 # Web Browser and Web gui
 # Why not put these in the module's path? Because they do not have access to the
 # target as of July 2017, which is needed.

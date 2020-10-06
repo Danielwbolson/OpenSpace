@@ -1,0 +1,31 @@
+local assetHelper = asset.require("util/asset_helper")
+local earth = asset.require("scene/solarsystem/planets/earth/earth")
+local transforms = asset.require("scene/solarsystem/planets/earth/transforms")
+
+local GulfOfMexico = {
+    Identifier = "GulfOfMexico",
+    Parent = earth.Earth.Identifier,
+    Transform = {
+        Translation = {
+            Type = "GlobeTranslation",
+            Globe = earth.Earth.Identifier,
+            Longitude = -89.890137,
+            Latitude = 25.681137
+        }
+    },
+    Renderable = {
+        Type = "RenderableVisLink",
+        Size = {1, 1, 1},
+        ScalingExponent = 6,
+        -- ScalingExponent = 10,
+        StepSize = 0.01,
+        Color = {1, 0, 0, 1},
+	VisLinkTexture = "GulfOfMexico"
+    },
+    GUI = {
+        Path = "/gulf"
+    }
+}
+
+local objects = { GulfOfMexico }
+assetHelper.registerSceneGraphNodesAndExport(asset, objects)
