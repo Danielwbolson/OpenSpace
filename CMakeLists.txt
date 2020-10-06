@@ -232,7 +232,8 @@ endif (OPENSPACE_HAVE_TESTS)
 
 
 # VisLink
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/modules/vislink/ext/external/VisLinkLib/src/src)
+include_directories(${CMAKE_SOURCE_DIR}/modules/vislink/ext/external/VisLinkLib/src/src)
+message("CORE --- ${CMAKE_SOURCE_DIR}/modules/vislink/ext/external/VisLinkLib/src/src")
 
 
 # Web Browser and Web gui

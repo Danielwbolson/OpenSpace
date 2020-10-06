@@ -166,3 +166,9 @@ endif ()
 if (OPENSPACE_NVTOOLS_ENABLED)
   target_link_libraries(OpenSpace "${OPENSPACE_NVTOOLS_PATH}/lib/x64/nvToolsExt64_1.lib")
 endif ()
+
+# VisLink
+target_link_directories(OpenSpace PUBLIC ${CMAKE_SOURCE_DIR}/modules/vislink/ext/external/VisLinkLib/build/install/lib)
+target_link_directories(OpenSpace PUBLIC ${VisLink_LibDirs})
+message("OpenSpace --- ${CMAKE_SOURCE_DIR}/modules/vislink/ext/external/VisLinkLib/build/install/lib")
+message("VisLinkDirs --- ${VisLink_LibDirs}")

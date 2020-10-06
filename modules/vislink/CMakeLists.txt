@@ -62,6 +62,7 @@ set(DEP_LINK_DIRS ${DEP_LINK_DIRS} ${external_dir}/VisLinkLib/install/lib)
 set(DEP_INCLUDES ${DEP_INCLUDES} ${external_dir}/VisLinkLib/src/src)
 
 set(vislink_external_dir ${external_dir}/VisLinkLib/src/cmake/framework/external)
+message("VISLINK_EXTERNAL --- ${vislink_external_dir}")
 
 set(DEP_LINK_DIRS ${DEP_LINK_DIRS} 
   ${vislink_external_dir}/SandBox/build/install/lib
@@ -81,13 +82,15 @@ set(DEP_INCLUDES ${DEP_INCLUDES}
 
 if(MSVC)
   set(DEP_LIBS ${DEP_LIBS} optimized glfw3.lib debug glfw3d.lib PARENT_SCOPE)
+  #set(DEP_LIBS ${DEP_LIBS} optimized glfw3.lib debug glfw3d.lib PARENT_SCOPE)
   set(DEP_LIBS ${DEP_LIBS} optimized sandbox.lib debug sandboxd.lib PARENT_SCOPE)
+  #set(DEP_LIBS ${DEP_LIBS} sandboxd.lib PARENT_SCOPE)
 else()
   set(DEP_LIBS ${DEP_LIBS} optimized libglfw3.a debug libglfw3d.a PARENT_SCOPE)
   set(DEP_LIBS ${DEP_LIBS} optimized libsandbox.a debug libsandboxd.a PARENT_SCOPE)
 endif()
 
-set(DEP_LIBS ${DEP_LIBS} sandbox glfw3)
+#set(DEP_LIBS ${DEP_LIBS} sandboxd glfw3d)
 
 find_package(Vulkan REQUIRED)
 message("vk Found" ${Vulkan_FOUND} ${Vulkan_INCLUDE_DIRS} ${Vulkan_LIBRARIES})
@@ -101,7 +104,6 @@ link_directories(${DEP_LINK_DIRS})
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 include_directories(${CMAKE_FRAMEWORK_DIR}/external/VisLinkLib/src/src/VisLink)
 include_directories(${CMAKE_FRAMEWORK_DIR}/external/VisLinkLib/src/src)
-message("DANIEL --- ${CMAKE_FRAMEWORK_DIR}/external/VisLinkLib/src/src")
 
 create_new_module(
   "VisLink"
@@ -112,3 +114,5 @@ create_new_module(
 
 set(PROJECT_NAME ${vislink_module})
 addStandardInfo(PUBLIC)
+
+set(VisLink_LibDirs ${DEP_LINK_DIRS} CACHE INTERNAL "")
