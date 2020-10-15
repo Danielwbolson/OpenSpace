@@ -170,5 +170,7 @@ endif ()
 # VisLink
 target_link_directories(OpenSpace PUBLIC ${CMAKE_SOURCE_DIR}/modules/vislink/ext/external/VisLinkLib/build/install/lib)
 target_link_directories(OpenSpace PUBLIC ${VisLink_LibDirs})
+target_include_directories(OpenSpace PUBLIC ${VisLinkLib_Includes})
+target_include_directories(OpenSpace PUBLIC ${VisLink_Includes})
 message("OpenSpace --- ${CMAKE_SOURCE_DIR}/modules/vislink/ext/external/VisLinkLib/build/install/lib")
 message("VisLinkDirs --- ${VisLink_LibDirs}")

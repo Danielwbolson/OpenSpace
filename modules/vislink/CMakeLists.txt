@@ -22,7 +22,7 @@
 # OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.                                          #
 ##########################################################################################
 
-set(CMAKE_FRAMEWORK_DIR ${CMAKE_CURRENT_SOURCE_DIR}/ext)
+set(CMAKE_FRAMEWORK_DIR ${CMAKE_SOURCE_DIR}/modules/vislink/ext)
 set(external_dir ${CMAKE_FRAMEWORK_DIR}/external)
 
 if(NOT EXISTS ${CMAKE_FRAMEWORK_DIR})
@@ -116,3 +116,4 @@ set(PROJECT_NAME ${vislink_module})
 addStandardInfo(PUBLIC)
 
 set(VisLink_LibDirs ${DEP_LINK_DIRS} CACHE INTERNAL "")
+set(VisLinkLib_Includes ${DEP_INCLUDES} CACHE INTERNAL "")
