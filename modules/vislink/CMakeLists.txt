@@ -116,4 +116,4 @@ set(PROJECT_NAME ${vislink_module})
 addStandardInfo(PUBLIC)
 
 set(VisLink_LibDirs ${DEP_LINK_DIRS} CACHE INTERNAL "")
-set(VisLinkLib_Includes ${DEP_INCLUDES} CACHE INTERNAL "")
+#set(VisLinkLib_Includes ${DEP_INCLUDES} CACHE INTERNAL "")

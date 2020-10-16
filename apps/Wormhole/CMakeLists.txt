@@ -62,3 +62,14 @@ if (OPENSPACE_MODULE_WEBBROWSER AND CEF_ROOT)
 elseif (OPENSPACE_MODULE_WEBBROWSER)
   message(WARNING "Web configured to be included, but no CEF_ROOT was found, please try configuring CMake again.")
 endif ()
+
+
+# VisLink
+target_link_directories(Wormhole PUBLIC ${CMAKE_SOURCE_DIR}/modules/vislink/ext/external/VisLinkLib/build/install/lib)
+
+target_link_libraries(Wormhole PUBLIC ${VisLink_Libs})
+target_link_libraries(Wormhole sandboxd.lib)
+message("DANIELLLLLLL ------------------------ ${VisLink_Libs}")
+
+target_link_directories(Wormhole PUBLIC ${VisLink_LibDirs})
+target_include_directories(Wormhole PUBLIC ${VisLinkLib_Includes})
