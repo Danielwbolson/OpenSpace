@@ -171,8 +171,6 @@ endif ()
 target_link_directories(OpenSpace PUBLIC ${CMAKE_SOURCE_DIR}/modules/vislink/ext/external/VisLinkLib/build/install/lib)
 
 target_link_libraries(OpenSpace PUBLIC ${VisLink_Libs})
-target_link_libraries(OpenSpace sandboxd.lib)
-message("DANIELLLLLLL ------------------------ ${VisLink_Libs}")
 
 target_link_directories(OpenSpace PUBLIC ${VisLink_LibDirs})
 target_include_directories(OpenSpace PUBLIC ${VisLinkLib_Includes})
