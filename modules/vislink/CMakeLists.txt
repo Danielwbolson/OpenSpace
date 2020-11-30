@@ -28,7 +28,7 @@ set(external_dir ${CMAKE_FRAMEWORK_DIR}/external)
 if(NOT EXISTS ${CMAKE_FRAMEWORK_DIR})
 execute_process(
 		#COMMAND git clone ${PROJECT_SOURCE_DIR}/.. ${CMAKE_FRAMEWORK_DIR}
-		COMMAND git clone https://github.com/dtorban/cmake_fw.git ${CMAKE_FRAMEWORK_DIR}
+		COMMAND git clone https://github.com/danielwbolson/cmake_fw.git ${CMAKE_FRAMEWORK_DIR}
 )
 endif()
 
@@ -54,7 +54,7 @@ source_group("Source Files" FILES ${SOURCE_FILES})
 include(${CMAKE_FRAMEWORK_DIR}/project/project.cmake)
 
 add_external(VisLinkLib
-	GIT_REPOSITORY https://github.com/dtorban/VisLink.git
+	GIT_REPOSITORY https://github.com/danielwbolson/VisLink.git
 	LIB_NAME VisLink
 )
 
@@ -82,13 +82,10 @@ set(DEP_INCLUDES ${DEP_INCLUDES}
 if(MSVC)
   set(DEP_LIBS ${DEP_LIBS} optimized glfw3.lib debug glfw3d.lib PARENT_SCOPE)
   set(DEP_LIBS ${DEP_LIBS} optimized sandbox.lib debug sandboxd.lib)
-  #set(DEP_LIBS ${DEP_LIBS} sandbox.lib PARENT_SCOPE)
 else()
   set(DEP_LIBS ${DEP_LIBS} optimized libglfw3.a debug libglfw3d.a PARENT_SCOPE)
   set(DEP_LIBS ${DEP_LIBS} optimized libsandbox.a debug libsandboxd.a PARENT_SCOPE)
 endif()
-
-#set(DEP_LIBS ${DEP_LIBS} sandbox glfw3)
 
 find_package(Vulkan REQUIRED)
 message("vk Found" ${Vulkan_FOUND} ${Vulkan_INCLUDE_DIRS} ${Vulkan_LIBRARIES})
