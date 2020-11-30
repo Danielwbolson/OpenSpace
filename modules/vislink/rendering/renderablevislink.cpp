@@ -424,10 +424,10 @@ void RenderableVisLink::update(const UpdateData& data) {
         viewFramesPerFrame = viewFrame;
     }
 
+
 }
 
 void RenderableVisLink::render(const RenderData& data, RendererTasks& tasks) {
-
 
     if (viewFramesPerFrame && viewFrame % viewFramesPerFrame == 0) {
 
@@ -510,6 +510,8 @@ void RenderableVisLink::render(const RenderData& data, RendererTasks& tasks) {
         //glFlush();
 
     }
+
+    CalculateFrameRate();
 
     viewFrame++;
 }

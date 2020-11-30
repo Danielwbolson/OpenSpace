@@ -88,7 +88,7 @@ else()
   set(DEP_LIBS ${DEP_LIBS} optimized libsandbox.a debug libsandboxd.a PARENT_SCOPE)
 endif()
 
-set(DEP_LIBS ${DEP_LIBS} sandbox glfw3)
+#set(DEP_LIBS ${DEP_LIBS} sandbox glfw3)
 
 find_package(Vulkan REQUIRED)
 message("vk Found" ${Vulkan_FOUND} ${Vulkan_INCLUDE_DIRS} ${Vulkan_LIBRARIES})

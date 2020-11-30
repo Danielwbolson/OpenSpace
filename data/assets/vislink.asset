@@ -1,4 +1,4 @@
-asset.require('./base')
+-- asset.require('./base')
 -- asset.require('vislink/vislink')
 asset.require('vislink/gulfofmexico')
 -- asset.require('vislink/canoe')

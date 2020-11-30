@@ -34,6 +34,7 @@
 #include <openspace/util/plugininfo.h>
 #include <openspace/util/openspacemodule.h>
 
+#include <cstdio>
 
 #include <ghoul/opengl/ghoul_gl.h>
 #include "VisLink/net/Client.h"
@@ -45,6 +46,23 @@ struct RenderData;
 
 class RenderableVisLink : public Renderable {
 public:
+
+    void CalculateFrameRate()
+    {
+        static float framesPerSecond = 0.0f;
+        static int fps;
+        static float lastTime = 0.0f;
+        float currentTime = GetTickCount() * 0.001f;
+        ++framesPerSecond;
+        fprintf(stderr, "Current Frames Per Second: %d\n\n", fps);
+        if (currentTime - lastTime > 1.0f)
+        {
+            lastTime = currentTime;
+            fps = (int)framesPerSecond;
+            framesPerSecond = 0;
+        }
+    }
+
     RenderableVisLink(const ghoul::Dictionary& dictionary, OpenSpaceModule* module);
     ~RenderableVisLink();
 

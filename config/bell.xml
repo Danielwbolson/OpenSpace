@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<Cluster masterAddress="192.168.170.100" externalControlPort="20500">
+    <Settings>
+        <Display swapInterval="0" />
+    </Settings>
+    <Scene>
+        <!-- @TODO Adjust this if the orientation in the dome is weird -->
+        <Orientation yaw="0.0" pitch="0.0" roll="0.0" />
+    </Scene>
+	
+	<!-- Desktop view -->
+    <Node address="192.168.170.100" port="20400" swapLock="false">
+        <Window name="Master" fullScreen="false">
+            <Pos x="50" y="50" />
+            <Size x="1280" y="720" />
+            <Viewport>
+				<PlanarProjection>
+                    <FOV down="25.0" left="30.0" right="30.0" up="25.0" />
+                    <Orientation heading="0.0" pitch="0.0" roll="0.0" />
+                </PlanarProjection>
+            </Viewport>
+        </Window>
+    </Node>
+
+	<!-- Lower Projector -->
+    <Node address="192.168.170.101" port="20401" swapLock="false">
+        <Window name="Client1" fullScreen="true" >
+			<Pos x="0.0" y="0.0" />
+            <Size x="4096" y="2160" />
+			<Viewport tracked="true" mesh="C:/Mesh/ScalableData1.ol" >
+				<FOV down="33.6775" left="38.8337" right="38.8337" up="33.6775" />
+                <Orientation heading="0.0" pitch="0.0" roll="-85.0177" />
+            </Viewport>
+        </Window>
+    </Node>
+	
+	<!-- Upper Projector -->
+    <Node address="192.168.170.102" port="20402" swapLock="false">
+        <Window name="Client2" fullScreen="true">
+			<Pos x="0.0" y="0.0" />
+            <Size x="3840" y="2160" />
+			<Viewport tracked="true" mesh="C:/Mesh/ScalableData2.ol" >
+                <FOV down="31.0836" left="39.0312" right="39.0312" up="31.0836" />
+                <Orientation heading="0.0" pitch="0.0" roll="-97.5762" />
+            </Viewport>
+        </Window>
+    </Node>
+    <User eyeSeparation="0.065">
+        <Pos x="0.0" y="0.0" z="0.0" />
+    </User>
+</Cluster>
