@@ -28,7 +28,7 @@ set(external_dir ${CMAKE_FRAMEWORK_DIR}/external)
 if(NOT EXISTS ${CMAKE_FRAMEWORK_DIR})
 execute_process(
 		#COMMAND git clone ${PROJECT_SOURCE_DIR}/.. ${CMAKE_FRAMEWORK_DIR}
-		COMMAND git clone https://github.com/danielwbolson/cmake_fw.git ${CMAKE_FRAMEWORK_DIR}
+		COMMAND git clone https://github.com/OpenSpace-VisLink/cmake_fw.git ${CMAKE_FRAMEWORK_DIR}
 )
 endif()
 
@@ -54,7 +54,7 @@ source_group("Source Files" FILES ${SOURCE_FILES})
 include(${CMAKE_FRAMEWORK_DIR}/project/project.cmake)
 
 add_external(VisLinkLib
-	GIT_REPOSITORY https://github.com/danielwbolson/VisLink.git
+	GIT_REPOSITORY https://github.com/OpenSpace-VisLink/VisLink.git
 	LIB_NAME VisLink
 )
 
