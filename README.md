@@ -1,10 +1,12 @@
-[OpenSpace-VisLink]
+### OpenSpace-VisLink
 Getting up and running from scratch:
-- git clone --recursive https://github.com/Danielwbolson/OpenSpace
+- git clone --recursive https://github.com/OpenSpace-VisLink/OpenSpace.git
 - run cmake configure
 - run 2nd time with vislink checked
 - comment out STB_IMAGE_IMPLEMENTATION @ openspace_DanOlson/apps/OpenSpace/ext/sgct/src/sgct/image.cpp
-- build the OpenSpace module project
+- build the 'OpenSpace' module project
+<br>
+<br>
 
 [OpenSpace](http://openspaceproject.com) is an open source, non-commercial, and freely available interactive data visualization software designed to visualize the entire known universe and portray our ongoing efforts to investigate the cosmos.  Bringing the latest techniques from data visualization research to the general public, OpenSpace supports interactive presentation of dynamic data from observations, simulations, and space mission planning and operations.  The software works on multiple operating systems (Windows, Linux, MacOS) with an extensible architecture powering high resolution tiled displays and planetarium domes, making use of the latest graphic card technologies for rapid data throughput.  In addition, OpenSpace enables simultaneous connections across the globe creating opportunity for shared experiences among audiences worldwide.
 
