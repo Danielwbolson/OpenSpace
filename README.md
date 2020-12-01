@@ -3,7 +3,7 @@ Getting up and running from scratch:
 - git clone --recursive https://github.com/OpenSpace-VisLink/OpenSpace.git
 - run cmake configure
 - run 2nd time with vislink checked
-- comment out STB_IMAGE_IMPLEMENTATION @ openspace_DanOlson/apps/OpenSpace/ext/sgct/src/sgct/image.cpp
+- comment out STB_IMAGE_IMPLEMENTATION @ OpenSpace/apps/OpenSpace/ext/sgct/src/sgct/image.cpp
 - build the 'OpenSpace' module project
 <br>
 <br>
