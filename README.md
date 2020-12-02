@@ -1,12 +1,14 @@
 ## OpenSpace-VisLink
 Getting up and running from scratch:
 #### Clone this repo
+In Git Bash:
 ```
 git clone --recursive https://github.com/OpenSpace-VisLink/OpenSpace.git
 ```
 #### Set up with Cmake
+In Git Bash:
 ```
-cd OpenSpace/; mkdir build; cd build; cmake-gui ..;
+cd OpenSpace; mkdir build; cd build; cmake-gui ..;
 ```
 - Click Configure 
 - Select Visual Studio 2017 and x64 and confirm
