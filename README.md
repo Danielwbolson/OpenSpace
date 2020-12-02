@@ -1,10 +1,18 @@
-### OpenSpace-VisLink
+## OpenSpace-VisLink
 Getting up and running from scratch:
+#### Clone this repo
 - git clone --recursive https://github.com/OpenSpace-VisLink/OpenSpace.git
-- run cmake configure
-- run 2nd time with vislink checked
-- comment out STB_IMAGE_IMPLEMENTATION @ OpenSpace/apps/OpenSpace/ext/sgct/src/sgct/image.cpp
-- build the 'OpenSpace' module project
+#### Set up with Cmake
+- cd OpenSpace/; mkdir build; cd build; cmake-gui ..;
+- Click Configure 
+- Select Visual Studio 2017 and x64 and confirm
+- Click 'Grouped' at the top of the CMake window
+- Check mark OPENSPACE --> OPENSPACE_MODULE_VISLINK
+- Configure again
+- Generate
+- OpenProject
+#### Comment out STB_IMAGE_IMPLEMENTATION @ OpenSpace/apps/OpenSpace/ext/sgct/src/sgct/image.cpp
+#### Set the 'OpenSpace' module as your startup project and build
 <br>
 <br>
 
