@@ -19,9 +19,9 @@ In the CMake window
 - Select Visual Studio 2017 and x64 and confirm
 - Click 'Grouped' at the top of the CMake window
 - Check mark OPENSPACE --> OPENSPACE_MODULE_VISLINK
-- Configure again
-- Generate
-- OpenProject
+- Click Configure again
+- Click Generate
+- Click OpenProject
 #### Comment out STB_IMAGE_IMPLEMENTATION @ OpenSpace/apps/OpenSpace/ext/sgct/src/sgct/image.cpp
 #### Set the 'OpenSpace' module as your startup project and build
 <br>
