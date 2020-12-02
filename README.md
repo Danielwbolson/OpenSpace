@@ -3,12 +3,16 @@ Getting up and running from scratch:
 #### Clone this repo
 In Git Bash:
 ```
+cd <desired_repo_location>
 git clone --recursive https://github.com/OpenSpace-VisLink/OpenSpace.git
 ```
 #### Set up with Cmake
 In Git Bash:
 ```
-cd OpenSpace; mkdir build; cd build; cmake-gui ..;
+cd OpenSpace; 
+mkdir build; 
+cd build; 
+cmake-gui ..;
 ```
 In the CMake window
 - Click Configure 
