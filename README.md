@@ -10,6 +10,7 @@ In Git Bash:
 ```
 cd OpenSpace; mkdir build; cd build; cmake-gui ..;
 ```
+In the CMake window
 - Click Configure 
 - Select Visual Studio 2017 and x64 and confirm
 - Click 'Grouped' at the top of the CMake window
