@@ -1,9 +1,13 @@
 ## OpenSpace-VisLink
 Getting up and running from scratch:
 #### Clone this repo
-- git clone --recursive https://github.com/OpenSpace-VisLink/OpenSpace.git
+```
+git clone --recursive https://github.com/OpenSpace-VisLink/OpenSpace.git
+```
 #### Set up with Cmake
-- cd OpenSpace/; mkdir build; cd build; cmake-gui ..;
+```
+cd OpenSpace/; mkdir build; cd build; cmake-gui ..;
+```
 - Click Configure 
 - Select Visual Studio 2017 and x64 and confirm
 - Click 'Grouped' at the top of the CMake window
@@ -15,7 +19,7 @@ Getting up and running from scratch:
 #### Set the 'OpenSpace' module as your startup project and build
 <br>
 <br>
-
+<br>
 [OpenSpace](http://openspaceproject.com) is an open source, non-commercial, and freely available interactive data visualization software designed to visualize the entire known universe and portray our ongoing efforts to investigate the cosmos.  Bringing the latest techniques from data visualization research to the general public, OpenSpace supports interactive presentation of dynamic data from observations, simulations, and space mission planning and operations.  The software works on multiple operating systems (Windows, Linux, MacOS) with an extensible architecture powering high resolution tiled displays and planetarium domes, making use of the latest graphic card technologies for rapid data throughput.  In addition, OpenSpace enables simultaneous connections across the globe creating opportunity for shared experiences among audiences worldwide.
 
 The project stems from the same academic collaboration between Sweden’s [Linköping University](https://www.liu.se) (LiU) and the [American Museum of Natural History](https://www.amnh.org) (AMNH) that led to the creation of Uniview and its parent company [SCISS](http://sciss.se).  Development of the software began several years ago through a close collaboration with NASA Goddard’s [Community Coordinated Modeling Center](https://ccmc.gsfc.nasa.gov) (CCMC) to model space weather forecasting and continued with visualizations of NASA’s New Horizons mission to Pluto and ESA’s Rosetta mission.  This promising set of preliminary work provided a foundation for recent NASA funding, which has extended the collaboration to include the University of Utah’s [Scientific Computing and Imaging](https://www.sci.utah.edu) (SCI) Institute, [New York University](https://www.nyu.edu)’s Tandon School of Engineering, multiple informal science institutions across the United States, and multiple, international vendors.  Current areas of focus within OpenSpace include:
