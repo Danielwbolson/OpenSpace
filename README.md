@@ -9,10 +9,10 @@ git clone --recursive https://github.com/OpenSpace-VisLink/OpenSpace.git
 #### Set up with Cmake
 In Git Bash:
 ```
-cd OpenSpace; 
-mkdir build; 
-cd build; 
-cmake-gui ..;
+cd OpenSpace
+mkdir build
+cd build
+cmake-gui ..
 ```
 In the CMake window
 - Click Configure 
@@ -24,6 +24,21 @@ In the CMake window
 - Click OpenProject
 #### Comment out STB_IMAGE_IMPLEMENTATION @ OpenSpace/apps/OpenSpace/ext/sgct/src/sgct/image.cpp
 #### Set the 'OpenSpace' module as your startup project and build
+<br>
+#### Clone VisLinkUnityTest
+In Git Bash:
+```
+cd <desired_repo_location>
+git clone https://github.com/OpenSpace-VisLink/VisLinkUnityTest.git
+```
+#### Run VisLink
+Run OpenSpace with the command line arguments:
+```
+-f <path_to>/vislink.cfg
+```
+This will automatically load the bell.xml file, but you can change that in the vislink.cfg file.
+Next, open the cloned VisLinkUnityTest project.
+Once OpenSpace is fully loaded (showing planets), click 'Play' in Unity.
 <br>
 <br>
 <br>
