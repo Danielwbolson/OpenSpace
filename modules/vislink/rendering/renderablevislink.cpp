@@ -213,8 +213,10 @@ void RenderableVisLink::initializeGL() {
 #endif
 
     TextureInfo texInfo;
-    texInfo.width = 1024;
-    texInfo.height = 1024;
+    //texInfo.width = 1024;
+    texInfo.width = 2048;
+    //texInfo.height = 1024;
+    texInfo.height = 2048;
     texInfo.components = 4;
     //640 480 3
     std::string textureName = _visLinkTexture;
