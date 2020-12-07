@@ -21,9 +21,13 @@ In the CMake window
 - Check mark OPENSPACE --> OPENSPACE_MODULE_VISLINK
 - Click Configure again
 - Click Generate
-- Click OpenProject
-#### Comment out STB_IMAGE_IMPLEMENTATION @ OpenSpace/apps/OpenSpace/ext/sgct/src/sgct/image.cpp
-#### Set the 'OpenSpace' module as your startup project and build
+- Click OpenProject  
+
+Comment out STB_IMAGE_IMPLEMENTATION:
+```
+OpenSpace/apps/OpenSpace/ext/sgct/src/sgct/image.cpp, line 29
+```
+Set the 'OpenSpace' module as your startup project and build.
 #### Clone VisLinkUnityTest
 In Git Bash:
 ```
